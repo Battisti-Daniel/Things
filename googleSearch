@@ -1,0 +1,18 @@
+#install lib use: python3 -m pip install googlesearch-python
+from googlesearch import search 
+
+#input something in query to search all things about it
+query = "your item"
+
+#result return all response from google about your query
+result = list(search(query,lang='pt-br'))
+
+#A filter to use to search something in a specific website.
+[print(i) for i in result if "github" in i]
+    
+#Example
+
+from googlesearch import search 
+query = "pao de batata"
+result = list(search(query,lang='pt-br',num=5)) #https://python-googlesearch.readthedocs.io/en/latest/
+[print(i) for i in result if "receita" in i]
